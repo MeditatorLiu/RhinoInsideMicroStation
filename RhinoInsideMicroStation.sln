@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rim", "Rim\Rim.csproj", "{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}.Debug|x64.ActiveCfg = Debug|x64
+		{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}.Debug|x64.Build.0 = Debug|x64
+		{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}.Release|x64.ActiveCfg = Release|x64
+		{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {663EB7D4-C0B9-40DB-93A5-725DBB369EBD}
+	EndGlobalSection
+EndGlobal

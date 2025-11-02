@@ -8,18 +8,18 @@ using System.Windows.Forms;
 using Rhino.Runtime.InProcess;
 using Rhino.Geometry;
 
-namespace MicroStationRhinoInside
+namespace RhinoInsideMicroStation
 {
   public class RunGrasshopper
   {
     public static void RunHelper()
     {
       // Extract definition to sample location as executable
-      var assembly = typeof(MicroStationRhinoInside.Entry.RhinoInsideSample).Assembly;
+      var assembly = typeof(RhinoInsideMicroStation.Entry.RimAddin).Assembly;
       string dir = System.IO.Path.GetDirectoryName(assembly.Location);
       string filePath = System.IO.Path.Combine(dir, "simple_def.gh");
 
-      using (var resStream = assembly.GetManifestResourceStream("MicroStationRhinoInside.SampleRunGrasshopper.simple_def.gh"))
+      using (var resStream = assembly.GetManifestResourceStream("RhinoInsideMicroStation.SampleRunGrasshopper.simple_def.gh"))
       using (var outStream = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
       {
         resStream.CopyTo(outStream);

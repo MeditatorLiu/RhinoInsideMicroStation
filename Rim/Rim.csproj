@@ -7,38 +7,35 @@
     <ProjectGuid>{FBC86B61-4C90-43E6-A5BF-C7C940DD3A17}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MicroStationRhinoInside</RootNamespace>
-    <AssemblyName>MicroStationRhinoInside</AssemblyName>
+    <RootNamespace>RhinoInsideMicroStation</RootNamespace>
+    <AssemblyName>Rim</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\MSConfiguration\WorkSpaces\Rim\Standards\Mdlapps\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bentley.DgnPlatformNET">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnPlatformNET.dll</HintPath>
-    </Reference>
-    <Reference Include="Bentley.GeometryNET">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.dll</HintPath>
-    </Reference>
+    <Reference Include="Bentley.DgnPlatformNET" />
+    <Reference Include="Bentley.GeometryNET" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -51,33 +48,21 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="ustation">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ustation.dll</HintPath>
-    </Reference>
+    <Reference Include="ustation" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entry\App.cs" />
     <Compile Include="SampleRunGrasshopper\RunGrasshopper.cs" />
     <Compile Include="SampleHelloWorld\HelloWorld.cs" />
-    <Compile Include="Entry\Commands.cs" />
     <Compile Include="Keyins.cs" />
+    <Compile Include="RhinoHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleWinFormsApp\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SampleWinFormsApp\MainForm.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)commands.xml">
       <LogicalName>CommandTable.xml</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SampleWinFormsApp\MainForm.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MicroStationRhinoInsideRibbon.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Rhino.Inside">

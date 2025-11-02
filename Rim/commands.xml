@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyinTree xmlns="http://www.bentley.com/schemas/1.0/MicroStation/AddIn/KeyinTree.xsd">
+  <RootKeyinTable ID="root">
+    <Keyword SubtableRef="Commands" CommandClass="MacroCommand" CommandWord="Rim">
+      <Options Required="true" TryParse="true"/>
+    </Keyword>
+  </RootKeyinTable>
+
+  <SubKeyinTables>
+    <KeyinTable ID="Commands">
+      <Keyword CommandWord="Start" />
+      <Keyword CommandWord="RunGH" />
+    </KeyinTable>
+  </SubKeyinTables>
+
+  <KeyinHandlers>
+    <KeyinHandler Keyin="Rim Start" Function="RhinoInsideMicroStation.Keyins.Start" />
+    <KeyinHandler Keyin="Rim RunGH" Function="RhinoInsideMicroStation.Keyins.RunGH" />
+  </KeyinHandlers>
+</KeyinTree>
